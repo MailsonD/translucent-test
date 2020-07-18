@@ -1,0 +1,4 @@
+FROM postgres
+ENV POSTGRES_DB games-shelf
+ENV POSTGRES_USER postgres
+ENV POSTGRES_PASSWORD postgres
