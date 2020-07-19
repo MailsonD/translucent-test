@@ -1,12 +1,12 @@
 
 server:
-  port: 8080
+  port: ${PORT:8080}
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/games-shelf
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://ec2-54-234-44-238.compute-1.amazonaws.com:5432/d5rknnpe6na0lp
+    username: xjzglyxqeysxzo
+    password: 04e055ea920798d0edea2ed3a30e838a029d95c6c6ff39954395d806491f9221
   jpa:
     hibernate:
       ddl-auto: update
