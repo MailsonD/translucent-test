@@ -17,13 +17,19 @@ public class GameService {
 
     private final GameRepository gameRepository;
 
-    public List<Game> listAll() {
-        return this.gameRepository.findAllByOrderByDateOfCompletionDesc();
-    }
-
     public void registerGame(Game game) {
         GameValidator.validade(game);
         this.gameRepository.save(game);
+    }
+
+    public List<Game> listGames(String query, Boolean completed) {
+        if (query != null && !query.isEmpty()) {
+            if (completed != null && completed) {
+               return this.gameRepository.findAllCompletedGamesAndFilterByTitle(query.toUpperCase());
+            }
+            return this.gameRepository.findAllGamesFilteredByTitle(query.toUpperCase());
+        }
+        return this.gameRepository.findAllByOrderByDateOfCompletionDesc();
     }
 
 }

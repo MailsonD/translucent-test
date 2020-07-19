@@ -15,14 +15,13 @@ public class GameController {
 
     private final GameService gameService;
 
-
     @GetMapping
-    public ResponseEntity<List<Game>> listGames() {
-        return ResponseEntity.ok(this.gameService.listAll());
+    public ResponseEntity<List<Game>> listGames(@RequestParam(required = false) String query, @RequestParam(required = false) Boolean completed) {
+        return ResponseEntity.ok(this.gameService.listGames(query, completed));
     }
 
     @PostMapping
-    public ResponseEntity registerGame(@RequestBody Game game) {
+    public ResponseEntity<Void> registerGame(@RequestBody Game game) {
         this.gameService.registerGame(game);
         return ResponseEntity.ok().build();
     }
