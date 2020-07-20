@@ -19,7 +19,7 @@ export class GameCardComponent implements OnInit {
   }
 
   getFormatedDate(): string {
-    return formatYearToString('2019');
+    return formatYearToString(this.game.year);
   }
 
   showDetails() {

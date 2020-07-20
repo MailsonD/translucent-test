@@ -59,9 +59,18 @@
         </mat-form-field>
       </div>
 
-      <button mat-raised-button color="accent" class="btn-submit" type="submit">
+      <button
+        mat-raised-button
+        color="accent"
+        class="btn-submit"
+        type="submit"
+        *ngIf="isNotSubmiting(); else loadSpinner"
+      >
         Register
       </button>
+      <ng-template #loadSpinner>
+        <mat-spinner color="accent" class="spinner"></mat-spinner>
+      </ng-template>
     </form>
   </mat-card>
 </div>
