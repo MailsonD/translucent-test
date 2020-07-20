@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { GameCardComponent } from './game/game-card/game-card.component';
 import { GameDetailsComponent } from './game/game-details/game-details.component';
 import { GameListComponent } from './game/game-list/game-list.component';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { GameListComponent } from './game/game-list/game-list.component';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
   exports: [
     HeaderComponent,

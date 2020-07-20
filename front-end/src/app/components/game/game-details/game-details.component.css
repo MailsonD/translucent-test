@@ -1,0 +1,17 @@
+.detail-container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+
+}
+
+.detail-text {
+    text-overflow: clip;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .detail-container {
+        width: 300px;
+    }
+}

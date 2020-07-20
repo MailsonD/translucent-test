@@ -1,3 +1,5 @@
+import { GameDetailsComponent } from './../game-details/game-details.component';
+import { MatDialog } from '@angular/material/dialog';
 import { Game } from './../../../model/game.model';
 import { Component, OnInit, Input } from '@angular/core';
 import { formatYearToString } from 'src/app/util/dateFormater';
@@ -11,12 +13,21 @@ export class GameCardComponent implements OnInit {
 
   @Input() game: Game;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   getFormatedDate(): string {
     return formatYearToString('2019');
+  }
+
+  showDetails() {
+    console.log('epa');
+    this.dialog.open(GameDetailsComponent, {
+      data: {
+        game: this.game
+      }
+    });
   }
 }

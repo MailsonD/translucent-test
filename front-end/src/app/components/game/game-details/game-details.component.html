@@ -1,1 +1,16 @@
-<p>game-details works!</p>
+<div class="detail-container">
+  <h1 class="detail-text">{{ data.game.title }}</h1>
+  <p class="detail-text">My personal notes: {{ data.game.personalNotes }}</p>
+  <div class="game-info">
+    <h3>Details</h3>
+    <ul>
+      <li>Age: {{ getFormatedDate() }}</li>
+      <li>Console: {{ data.game.console }}</li>
+      <li>Console: {{ data.game.console }}</li>
+      <li>Completed: {{ getFormatedCompleted() }}</li>
+      <li *ngIf="data.game.completed">
+        Date of Completion: {{ data.game.dateOfCompletion }}
+      </li>
+    </ul>
+  </div>
+</div>

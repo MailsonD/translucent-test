@@ -31,8 +31,6 @@ export class CatalogComponent implements OnInit, OnDestroy {
     this.subscriptions.push(
       this._games$.subscribe(loadedGames => {
         this.loadedGames = loadedGames;
-        console.log('epa');
-        console.log(this.loadedGames);
       }
       ));
   }
