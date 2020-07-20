@@ -1,0 +1,6 @@
+.catalog-container {
+    margin: 20px 20px 20px 20px;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+}

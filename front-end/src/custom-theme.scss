@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,17 +11,26 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$front-end-primary: mat-palette($mat-indigo);
-$front-end-accent: mat-palette($mat-pink, A200, A100, A400);
+$desafio-phoebus-primary: mat-palette($mat-indigo);
+$desafio-phoebus-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$front-end-warn: mat-palette($mat-red);
+$desafio-phoebus-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$front-end-theme: mat-light-theme($front-end-primary, $front-end-accent, $front-end-warn);
+$desafio-phoebus-theme: mat-light-theme(
+  $desafio-phoebus-primary,
+  $desafio-phoebus-accent,
+  $desafio-phoebus-warn
+);
+
+// Define an alternate dark theme.
+$dark-primary: mat-palette($mat-gray, A900);
+$dark-accent: mat-palette($mat-amber, A200, A100, A400);
+$dark-warn: mat-palette($mat-deep-orange);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($front-end-theme);
-
+@include angular-material-theme($dark-theme);

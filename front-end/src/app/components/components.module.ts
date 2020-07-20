@@ -7,24 +7,36 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { GameCardComponent } from './game-card/game-card.component';
 import { GameDetailsComponent } from './game-details/game-details.component';
+import { GameListComponent } from './game-list/game-list.component';
 
 
 @NgModule({
-  declarations: [ HeaderComponent, FooterComponent, AutocompleteSearchComponent, GameCardComponent, GameDetailsComponent ],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    AutocompleteSearchComponent,
+    GameCardComponent,
+    GameDetailsComponent,
+    GameListComponent
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatInputModule,
+    MatCardModule,
     FormsModule
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    GameCardComponent,
+    GameListComponent
   ]
 })
 export class ComponentsModule { }
