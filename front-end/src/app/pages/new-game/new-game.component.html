@@ -1,1 +1,50 @@
-<p>new-game works!</p>
+<div class="new-game-container">
+  <mat-card>
+    <h1>Register New Game</h1>
+    <form class="form-box">
+      <mat-form-field appearance="outline" class="form-field-full">
+        <mat-label>Game Title</mat-label>
+        <input matInput placeholder="Write the game title here" />
+      </mat-form-field>
+
+      <div>
+        <mat-form-field appearance="outline" class="form-field-half">
+          <mat-label>Game Year</mat-label>
+          <input matInput placeholder="Write the game title here" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-field-half">
+          <mat-label>Console</mat-label>
+          <mat-select>
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field appearance="outline" class="form-field-full">
+        <mat-label>Personal Notes</mat-label>
+        <textarea matInput></textarea>
+      </mat-form-field>
+
+      <div class="completion-date">
+        <mat-slide-toggle>Completed</mat-slide-toggle>
+        <mat-form-field
+          color="accent"
+          appearance="outline"
+          class="form-filed-half"
+        >
+          <mat-label>Inherited calendar color</mat-label>
+          <input matInput [matDatepicker]="picker1" />
+          <mat-datepicker-toggle
+            matSuffix
+            [for]="picker1"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <button mat-raised-button color="accent" class="btn-submit">
+        Register
+      </button>
+    </form>
+  </mat-card>
+</div>

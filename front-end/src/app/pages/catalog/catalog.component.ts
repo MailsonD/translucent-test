@@ -39,6 +39,8 @@ export class CatalogComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => {
       sub.unsubscribe();
     });
+
+    this.store.dispatch(GameActions.clearGameState());
   }
 
   isFetching(): boolean {

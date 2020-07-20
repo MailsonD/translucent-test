@@ -1,7 +1,10 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
   <mat-toolbar-row class="top-bar">
     <a class="link-logo-img"
-      ><img src="../../../assets/img/logo.svg" class="logo-img"
+      ><img
+        src="../../../assets/img/logo.svg"
+        class="logo-img"
+        (click)="goToCatalog()"
     /></a>
     <form>
       <mat-form-field class="input-search">
@@ -18,7 +21,7 @@
     </form>
 
     <div class="end-top-bar">
-      <span class="text-top-bar">New Game</span>
+      <button mat-stroked-button (click)="goToNewGame()">New Game</button>
     </div>
   </mat-toolbar-row>
 
