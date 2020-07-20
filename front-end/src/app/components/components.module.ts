@@ -9,9 +9,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
-import { GameCardComponent } from './game-card/game-card.component';
-import { GameDetailsComponent } from './game-details/game-details.component';
-import { GameListComponent } from './game-list/game-list.component';
+import { GameCardComponent } from './game/game-card/game-card.component';
+import { GameDetailsComponent } from './game/game-details/game-details.component';
+import { GameListComponent } from './game/game-list/game-list.component';
 
 
 @NgModule({
@@ -35,7 +35,6 @@ import { GameListComponent } from './game-list/game-list.component';
   exports: [
     HeaderComponent,
     FooterComponent,
-    GameCardComponent,
     GameListComponent
   ]
 })
