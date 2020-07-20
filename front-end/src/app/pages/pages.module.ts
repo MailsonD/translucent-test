@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { CatalogComponent } from './catalog/catalog.component';
 import { NewGameComponent } from './new-game/new-game.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -17,7 +18,8 @@ import { NewGameComponent } from './new-game/new-game.component';
   imports: [
     CommonModule,
     PagesRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    MatProgressSpinnerModule,
   ]
 })
 export class PagesModule { }

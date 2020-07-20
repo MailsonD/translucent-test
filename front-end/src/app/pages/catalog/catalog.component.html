@@ -1,3 +1,8 @@
 <div class="catalog-container">
-  <app-game-list></app-game-list>
+  <div *ngIf="isFetching(); else GameList" class="spinner-box">
+    <mat-spinner color="accent" class="spinner"></mat-spinner>
+  </div>
+  <ng-template #GameList>
+    <app-game-list [games]="loadedGames.games"></app-game-list>
+  </ng-template>
 </div>

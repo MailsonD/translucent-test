@@ -48,6 +48,12 @@ const _registerGameReducer = createReducer(
 );
 
 export function reducer(state: GameState | undefined, action: Action) {
+    if (!state) {
+        return {
+            loadedGames: _loadedGamesReducer(initialState.loadedGames, action),
+            registerGame: _registerGameReducer(initialState.registerGame, action),
+        };
+    }
     return {
         loadedGames: _loadedGamesReducer(state.loadedGames, action),
         registerGame: _registerGameReducer(state.registerGame, action),
