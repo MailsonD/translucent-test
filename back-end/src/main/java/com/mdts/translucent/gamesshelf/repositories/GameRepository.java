@@ -19,7 +19,4 @@ public interface GameRepository  extends JpaRepository<Game, Integer> {
     @Query("SELECT g FROM Game g WHERE UPPER(g.title) LIKE %:filter% AND g.completed = true ORDER BY g.dateOfCompletion DESC")
     List<Game> findAllCompletedGamesAndFilterByTitle(String filter);
 
-    @Query("SELECT g FROM Game g WHERE UPPER(g.title) LIKE %:filter% AND g.year BETWEEN :initialYear AND :finalYear  ORDER BY g.dateOfCompletion DESC")
-    List<Game> findAllGameBetween(String filter, String initialYear, String finalYear);
-
 }
