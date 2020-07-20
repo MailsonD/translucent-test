@@ -1,1 +1,39 @@
-<p>header works!</p>
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <mat-toolbar-row class="top-bar">
+    <a class="link-logo-img"
+      ><img src="../../../assets/img/logo.svg" class="logo-img"
+    /></a>
+    <form>
+      <mat-form-field class="input-search">
+        <mat-label class="input-font-size">Search</mat-label>
+        <input
+          matInput
+          placeholder="What do you want?"
+          class="input-font-size"
+          name="query"
+        />
+        <mat-icon matSuffix class="icon-size">search</mat-icon>
+        <button type="submit" hidden></button>
+      </mat-form-field>
+    </form>
+
+    <div class="end-top-bar">
+      <span class="text-top-bar">New Game</span>
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row class="top-bar-second-row">
+    <form class="form-seach-responsive">
+      <mat-form-field class="input-search-responsive">
+        <mat-label class="input-font-size">Search</mat-label>
+        <input
+          matInput
+          placeholder="What do you want?"
+          class="input-font-size"
+          name="query"
+        />
+        <mat-icon matSuffix class="icon-size">search</mat-icon>
+      </mat-form-field>
+    </form>
+  </mat-toolbar-row>
+</mat-toolbar>

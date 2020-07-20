@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../components/components.module';
 import { PagesComponent } from './pages.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,8 @@ import { NewGameComponent } from './new-game/new-game.component';
   ],
   imports: [
     CommonModule,
-    PagesRoutingModule
+    PagesRoutingModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }

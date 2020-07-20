@@ -3,20 +3,13 @@ import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>Hello World!</h1>`
+  template: `<router-outlet></router-outlet>`
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Games Shelf';
 
   constructor(private httpClient: HttpClient) { }
 
-  ngOnInit(): void {
-    console.log('opa');
-    this.httpClient.get('https://gamesshelf.herokuapp.com/games').subscribe(res => {
-      console.log('epa');
-      console.log(res);
-    });
-  }
 
 
 }
