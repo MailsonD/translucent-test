@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 public class GameValidator {
 
-    public static void validade(Game game) {
+    public void validate(Game game) {
         if (game.getDateOfCompletion() != null && game.getDateOfCompletion().isAfter(LocalDate.now())) {
             throw new InvalidDateException();
         } else if (game.getCompleted() && game.getDateOfCompletion() == null) {

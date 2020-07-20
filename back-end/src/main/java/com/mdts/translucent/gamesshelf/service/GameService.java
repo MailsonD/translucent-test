@@ -17,8 +17,10 @@ public class GameService {
 
     private final GameRepository gameRepository;
 
+    private final GameValidator gameValidator;
+
     public void registerGame(Game game) {
-        GameValidator.validade(game);
+        gameValidator.validate(game);
         this.gameRepository.save(game);
     }
 

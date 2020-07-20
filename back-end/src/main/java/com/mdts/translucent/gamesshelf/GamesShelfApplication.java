@@ -1,5 +1,6 @@
 package com.mdts.translucent.gamesshelf;
 
+import com.mdts.translucent.gamesshelf.validators.GameValidator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -12,4 +13,7 @@ public class GamesShelfApplication {
         SpringApplication.run(GamesShelfApplication.class, args);
     }
 
+    public GameValidator getGameValidator() {
+        return new GameValidator();
+    }
 }
