@@ -1,7 +1,7 @@
 <div class="new-game-container">
   <mat-card>
     <h1>Register New Game</h1>
-    <form class="form-box" [formGroup]="form">
+    <form class="form-box" [formGroup]="form" (ngSubmit)="submit()">
       <mat-form-field appearance="outline" class="form-field-full">
         <mat-label>Game Title</mat-label>
         <input
@@ -59,7 +59,7 @@
         </mat-form-field>
       </div>
 
-      <button mat-raised-button color="accent" class="btn-submit">
+      <button mat-raised-button color="accent" class="btn-submit" type="submit">
         Register
       </button>
     </form>

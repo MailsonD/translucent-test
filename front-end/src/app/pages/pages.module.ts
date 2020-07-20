@@ -40,7 +40,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
   ]
 })
 export class PagesModule { }

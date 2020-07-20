@@ -8,6 +8,8 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ToastrModule } from 'ngx-toastr';
+
 import { Reducer as GameReducer, Effects as GameEffects } from './store/games';
 
 @NgModule({
@@ -19,6 +21,7 @@ import { Reducer as GameReducer, Effects as GameEffects } from './store/games';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ToastrModule.forRoot(), // ToastrModule added
     StoreModule.forRoot({
       gameStore: GameReducer
     }),

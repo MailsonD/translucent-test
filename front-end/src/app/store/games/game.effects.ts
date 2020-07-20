@@ -21,6 +21,18 @@ export class GameEffects {
         ))
     );
 
+    registerGame$: Observable<Action> = createEffect(() => this.actions$.pipe(
+        ofType(GameActions.registerGame),
+        mergeMap((action) => this.gamesService.registerGame(action.game)
+            .pipe(
+                map(() => {
+                    return GameActions.registerGameSucces();
+                }),
+                catchError(() => of(GameActions.registerGameFailed()))
+            )
+        )
+    ));
+
     constructor(
         private actions$: Actions,
         private gamesService: GamesService,

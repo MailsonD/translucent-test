@@ -17,3 +17,23 @@ export const fetchGamesSuccess = createAction(
 export const clearGameState = createAction(
     '[Clear State] Clear Game State'
 );
+
+
+
+export const registerGame = createAction(
+    '[Register Game] Register a new game on API',
+    props<{ game: Game }>(),
+);
+
+export const registerGameFailed = createAction(
+    '[Register Game] Register a new game failed'
+);
+
+export const registerGameSucces = createAction(
+    '[Register Game] Register a new game success'
+);
+
+export const clearRegisterGame = createAction(
+    '[Clear State] Clear Register Game State'
+);
+

@@ -19,4 +19,8 @@ export class GamesService {
       .pipe(map(result => result as Game[]));
   }
 
+  registerGame(game: Game): Observable<any> {
+    return this.httpClient.post(`${env.API_URL}/games`, game);
+  }
+
 }

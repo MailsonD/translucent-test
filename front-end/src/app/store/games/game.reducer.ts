@@ -45,6 +45,28 @@ const _loadedGamesReducer = createReducer(
 
 const _registerGameReducer = createReducer(
     initialState.registerGame,
+
+    on(Actions.registerGame, () => {
+        return {
+            requestStatus: RequestStatus.PROGRESS
+        };
+    }),
+
+    on(Actions.registerGameFailed, () => {
+        return {
+            requestStatus: RequestStatus.FAILED
+        };
+    }),
+
+    on(Actions.registerGameSucces, () => {
+        return {
+            requestStatus: RequestStatus.SUCCESS
+        };
+    }),
+
+    on(Actions.clearRegisterGame, () => {
+        return initialState.registerGame;
+    }),
 );
 
 export function reducer(state: GameState | undefined, action: Action) {
