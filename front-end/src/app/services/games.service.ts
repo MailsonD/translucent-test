@@ -19,6 +19,14 @@ export class GamesService {
       .pipe(map(result => result as Game[]));
   }
 
+  searchGamesByTitle(query: string): Observable<Game[]> {
+    return this.httpClient.get(`${env.API_URL}/games`, {
+      params: {
+        query
+      }
+    }).pipe(map(result => result as Game[]));
+  }
+
   registerGame(game: Game): Observable<any> {
     return this.httpClient.post(`${env.API_URL}/games`, game);
   }

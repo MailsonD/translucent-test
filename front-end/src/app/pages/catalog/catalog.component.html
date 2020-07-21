@@ -1,4 +1,4 @@
-<div class="catalog-container">
+<div class="catalog-container" *ngIf="page">
   <div *ngIf="isFetching(); else GameList" class="spinner-box">
     <mat-spinner color="accent" class="spinner"></mat-spinner>
   </div>

@@ -6,13 +6,14 @@
         class="logo-img"
         (click)="goToCatalog()"
     /></a>
-    <form>
+    <form (submit)="onSubmitQuery()">
       <mat-form-field class="input-search">
         <mat-label class="input-font-size">Search</mat-label>
         <input
           matInput
           placeholder="What do you want?"
           class="input-font-size"
+          [(ngModel)]="query"
           name="query"
         />
         <mat-icon matSuffix class="icon-size">search</mat-icon>
@@ -26,13 +27,14 @@
   </mat-toolbar-row>
 
   <mat-toolbar-row class="top-bar-second-row">
-    <form class="form-seach-responsive">
+    <form class="form-seach-responsive" (submit)="onSubmitQuery()">
       <mat-form-field class="input-search-responsive">
         <mat-label class="input-font-size">Search</mat-label>
         <input
           matInput
           placeholder="What do you want?"
           class="input-font-size"
+          [(ngModel)]="query"
           name="query"
         />
         <mat-icon matSuffix class="icon-size">search</mat-icon>

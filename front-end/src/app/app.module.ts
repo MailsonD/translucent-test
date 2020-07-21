@@ -12,6 +12,9 @@ import { ToastrModule } from 'ngx-toastr';
 
 import { Reducer as GameReducer, Effects as GameEffects } from './store/games';
 
+import { Reducer as SearchReducer, Effects as SearchEffects } from './store/search';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +26,12 @@ import { Reducer as GameReducer, Effects as GameEffects } from './store/games';
     HttpClientModule,
     ToastrModule.forRoot(), // ToastrModule added
     StoreModule.forRoot({
-      gameStore: GameReducer
+      gameStore: GameReducer,
+      searchStore: SearchReducer,
     }),
     EffectsModule.forRoot([
       GameEffects,
+      SearchEffects
     ])
   ],
   providers: [],

@@ -23,7 +23,6 @@ export class GameCardComponent implements OnInit {
   }
 
   showDetails() {
-    console.log('epa');
     this.dialog.open(GameDetailsComponent, {
       data: {
         game: this.game

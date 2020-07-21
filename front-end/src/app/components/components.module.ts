@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AutocompleteSearchComponent } from './autocomplete-search/autocomplete-search.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,7 +17,6 @@ import { MatDialogModule } from '@angular/material/dialog';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    AutocompleteSearchComponent,
     GameCardComponent,
     GameDetailsComponent,
     GameListComponent
